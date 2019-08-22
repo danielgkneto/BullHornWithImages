@@ -11,13 +11,13 @@
         <input type="hidden" th:field="*{postedDate}" />
         <div class="form-group">
             <label for="sentby">Sent By: </label>
-            <input id="sentby" type="text" class="form-control" th:field="*{sentBy}" />
+            <input id="sentby" placeholder="At least one character" type="text" class="form-control" th:field="*{sentBy}" />
             <span th:if="${#fields.hasErrors('sentBy')}"
                   th:errors="*{sentBy}"></span>
         </div>
         <div class="form-group">
             <label for="content">Content: </label>
-            Content: <textarea rows="3" id="content" class="form-control" th:field="*{content}" />
+            <textarea rows="3" id="content" placeholder="At least one character" class="form-control" th:field="*{content}" />
             <span th:if="${#fields.hasErrors('content')}"
                   th:errors="*{content}"></span>
         </div>
